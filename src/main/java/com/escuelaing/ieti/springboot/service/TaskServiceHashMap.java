@@ -35,8 +35,8 @@ public class TaskServiceHashMap implements TaskService {
 
     @Override
     public boolean deleteById(String id) {
-        tasks.remove(id);
-        return false;
+        Task taskTemp = tasks.remove(id);
+        return taskTemp != null;
     }
 
     @Override
